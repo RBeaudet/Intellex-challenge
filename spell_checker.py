@@ -113,7 +113,7 @@ class SpellChecker():
                 if candidate in self.KNOWN_WORDS:
                     corrected_words.append(candidate)
 
-            if len(corrected_words) > 1:
+            if len(corrected_words) > 0:
                 corrected_words = sorted(corrected_words, key=self.probability)
                 return corrected_words
             else:
