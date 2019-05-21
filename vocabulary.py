@@ -20,7 +20,7 @@ def build_vocabulary(text):
     - text : (str) The corpus from which to build a custom vocabulary.
 
     Returns:
-    - WORDS : (dict) a dictionary mapping a word to its occurrence.
+    - WORDS : (Counter) a dictionary mapping a word to its occurrence.
     """
     words = re.findall(r'\w+', text)  # transform text into a list of words
     WORDS = Counter(words)
