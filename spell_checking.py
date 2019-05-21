@@ -67,7 +67,7 @@ class SpellChecker():
         return re.findall(r'\w+', text)
 
 
-    def probability(self, word, N=sum(self.WORDS.values())):
+    def probability(self, word):
         """
         Compute probability of word 'word' based on its
         occurrence in the corpus.
@@ -76,7 +76,7 @@ class SpellChecker():
         - word (str) : word of interest
         - N (int) : total number of words in the corpus
         """
-        prob = self.WORDS[word] / N
+        prob = self.WORDS[word] / sum(self.WORDS.values())
         return prob
 
         
